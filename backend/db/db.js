@@ -13,7 +13,14 @@ const adminSchema = new Schema({
     token: String
 })
 
+const questionSchema = new Schema({
+    problemStatement: String,
+    difficulty: String,
+    problemId: String
+})
+
 const User = mongoose.model('User', userSchema);
 const Admin = mongoose.model('Admin',adminSchema);
+const Question = mongoose.model('Question',questionSchema);
 
-module.exports = { User,Admin }
+module.exports = { User,Admin,Question }
